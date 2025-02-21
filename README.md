@@ -27,7 +27,7 @@ Ce projet inclut :
 
 👥 Équipe
 
-Quentin ROBERT – Backend
-Maxime LECOMTE – Frontend, UI/UX
-Nicolas SAINTY - IA
+Quentin ROBERT – Backend | 
+Maxime LECOMTE – Frontend, UI/UX | 
+Nicolas SAINTY - IA | 
 Florent CANALES – Gestion de projet
