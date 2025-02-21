@@ -9,21 +9,21 @@ Fovéa est un projet réalisé en troisième année dans le cadre d’un travail
 
 Ce projet inclut :
 
-✔️ Développement d’un MVP
-✔️ Rédaction du cahier des charges
-✔️ Documentation technique
+✔️ Développement d’un MVP  
+✔️ Rédaction du cahier des charges  
+✔️ Documentation technique  
 
 🚀 Fonctionnalités principales
 
-✅ Scan d’un article via l’appareil photo 📸
-✅ Reconnaissance et identification des produits en temps réel 🛍️
-✅ Intégration avec une base de données de stock 📦
-✅ Interface web pour la gestion des stocks 🔍
+✅ Scan d’un article via l’appareil photo 📸  
+✅ Reconnaissance et identification des produits en temps réel 🛍️  
+✅ Intégration avec une base de données de stock 📦  
+✅ Interface web pour la gestion des stocks 🔍  
 
 📚 Documentation
 
-📄 Cahier des charges
-📖 Documentation technique
+📄 Cahier des charges  
+📖 Documentation technique  
 
 👥 Équipe
 
