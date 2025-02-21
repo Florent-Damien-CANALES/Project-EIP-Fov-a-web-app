@@ -1,0 +1,20 @@
+{
+  "Admin": {
+    "id": "354ac75d-f73c-49fb-93c4-376b22ca9de6",
+    "email": "admin@admin.com",
+    "password": "ywGqbTae3mQ^2xWwDQd#cXHCajvSmNvE",
+    "role": "ADMIN"
+  },
+  "Vendor": {
+    "id": "7e638299-7aa3-4ca2-94fe-58ae7739668b",
+    "email": "vendor@vendor.com",
+    "password": "&htFgu!D&sj2xQoyVZJ%AWz6Hq%$%vcG",
+    "role": "VENDOR"
+  },
+  "User": {
+    "id": "1cf165de-4b82-4ea8-8fac-23696feff93b",
+    "email": "user@user.com",
+    "password": "2um9zMb!aGxJvhjACUM@LwBr7Qr8p4W8",
+    "role": "USER"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Boucles d'oreilles": {
+    "id": "5ce44506-cc91-4b27-9bc5-33570e41c525",
+    "picture": "earring.jpg"
+  },
+  "Colliers": {
+    "id": "b3b55529-f4fa-4a7a-824b-b3655b1baf7a",
+    "picture": "necklace.jpg"
+  },
+  "Bagues": {
+    "id": "d51a2ef5-bcfe-4372-9ed1-71b69705118c",
+    "picture": "ring.jpg"
+  },
+  "Charms": {
+    "id": "28fd9122-48c9-4945-8042-d1af478ed8a5",
+    "picture": "charm.jpg"
+  },
+  "Bracelets": {
+    "id": "0846b19b-931c-4135-9537-16c0fc0857d2",
+    "picture": "bracelet.jpg"
+  }
+}

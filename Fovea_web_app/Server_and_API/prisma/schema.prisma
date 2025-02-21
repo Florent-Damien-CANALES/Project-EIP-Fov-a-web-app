@@ -1,0 +1,105 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id String @id @default(uuid())
+  name String @unique
+  pictures ProductPicture[] @relation("ProductPictures")
+  reference String
+  category Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+  price Float
+  description String @db.LongText
+  tag Tag[]
+  barCode BarCode? @relation("BarCode")
+  createdAt DateTime @default(now())
+  productInvoice ProductInvoice[]
+}
+
+model Tag {
+  id String @id @default(uuid())
+  name String
+  products Product[]
+}
+
+model Category {
+  id String @id @default(uuid())
+  name String @unique
+  coverPicture CategoryPicture? @relation("CategoryPictures")
+  products Product[]
+}
+
+model ProductPicture {
+  id String @id @default(uuid())
+  url String
+  product Product? @relation("ProductPictures", fields: [productId], references: [id])
+  productId String?
+}
+
+model CategoryPicture {
+  id String @id @default(uuid())
+  url String
+  category Category? @relation("CategoryPictures", fields: [categoryId], references: [id])
+  categoryId String? @unique
+}
+
+model BarCode {
+  id String @id @default(uuid())
+  pictureUrl String
+  code String @unique
+  product Product @relation("BarCode", fields: [productId], references: [id])
+  productId String @unique
+}
+
+model User {
+  id String @id @default(uuid())
+  name String
+  email String @unique
+  password String
+  role Role
+}
+
+model Shipping {
+  id String @id @default(uuid())
+  name String
+  address String
+  city String
+  country String
+  postalCode String
+  invoice Invoice?
+}
+
+model ProductInvoice {
+  id String @id @default(uuid())
+  product Product @relation(fields: [productId], references: [id])
+  productId String
+  quantity Int
+  invoice Invoice @relation(fields: [invoiceId], references: [id])
+  invoiceId String
+}
+
+model Invoice {
+  id String @id @default(uuid())
+  shipping Shipping @relation(fields: [shippingId], references: [id])
+  shippingId String @unique
+  products ProductInvoice[]
+  paid Float
+  invoiceNumber String
+  createdAt DateTime @default(now())
+  pdfUrl String?
+}
+
+enum Role {
+  ADMIN
+  VENDOR
+  USER
+}

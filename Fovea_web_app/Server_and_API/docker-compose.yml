@@ -1,0 +1,38 @@
+name: fovea
+
+services:
+  db:
+    image: mysql
+    restart: always
+    container_name: db
+    env_file:
+      - .env.docker
+    ports:
+      - 3306:3306
+      - 33060:33060
+
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    restart: always
+    container_name: meilisearch
+    ports:
+      - 7700:7700
+    env_file:
+      - .env.docker
+
+  app:
+    build: .
+    container_name: api
+    restart: always
+    depends_on:
+      - db
+      - meilisearch
+    ports:
+      - 3000:3000
+    env_file:
+      - .env.docker
+    volumes:
+      - uploads:/usr/src/app/uploads
+
+volumes:
+  uploads:
